@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var babel = require('gulp-babel');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
@@ -42,6 +43,7 @@ gulp.task('minify-css', ['less'], function() {
 gulp.task('js', function() {
     return gulp.src(['js/sb-admin-2.js'])
         .pipe(header(banner, { pkg: pkg }))
+        .pipe(babel({presets: ['es2015']}))
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.reload({
             stream: true
@@ -102,6 +104,10 @@ gulp.task('copy', function() {
 
 // Run everything
 gulp.task('default', ['minify-css', 'minify-js', 'copy']);
+
+gulp.task('dev1', function(){
+    gulp.watch('js/*.js', ['js']);
+});
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {

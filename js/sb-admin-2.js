@@ -39,4 +39,22 @@ $(function() {
             break;
         }
     }
+
+    // Login action
+    $("#login-button").click((event) => {
+        let login = $("[name='login']").val();
+        let password = $("[name='password']").val();
+        
+        let loginOk = (page) => window.location.href = `${page}.html`;
+        let loginKo = () => alert("Echec de tentative de fraude");
+
+        if(login === 'admin-gen'){
+            loginOk('index');
+        }
+        else if(login === 'collaborateur'){
+            loginKo();
+        }else{
+            loginKo();
+        }
+    });
 });

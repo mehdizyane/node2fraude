@@ -74,11 +74,11 @@ $(function () {
         };
         switch (event.target.id) {
             case "vehicule":
-                morris.datas.secteurChange(morris.datas.deplacement, "Véhicule");
+                morris.datas.secteurChange(morris.datas.vehiculeData, "Véhicule");
                 buttonChange("Véhicule");
                 break;
             case "deplacement":
-                morris.datas.secteurChange(morris.datas.deplacement, "Déplacement");
+                morris.datas.secteurChange(morris.datas.deplacementData, "Déplacement");
                 buttonChange("Déplacement");
                 break;
             case "fourniture":
@@ -86,14 +86,20 @@ $(function () {
                 buttonChange("Fourniture");
                 break;
             case "restaurant":
-                morris.datas.secteurChange(morris.datas.fournituresData, "Restaurant");
-                buttonChange("Véhicule");
+                morris.datas.secteurChange(morris.datas.restaurationData, "Restaurant");
+                buttonChange("Restaurant");
                 break;
             case "hebergement":
-                buttonChange("Véhicule");
+                morris.datas.secteurChange(morris.datas.hebergementData, "Hébergement");
+                buttonChange("Hebergement");
                 break;
             case "divers":
-                buttonChange("Véhicule");
+                morris.datas.secteurChange(morris.datas.diversData, "Divers");
+                buttonChange("Divers");
+                break;
+            case "total":
+                morris.datas.secteurChange(morris.datas.totalData, "Tous les secteurs");
+                buttonChange("Tous les secteurs");
                 break;
         }
     });

@@ -71,98 +71,183 @@ Morris.Area({
     xkey: 'period',
     ykeys: ['encours', 'valide', 'rembourse', 'refuse'],
     labels: ['A Valider', 'En traitement compta', 'Remboursées', 'Refusées'],
-    lineColors: ['#337ab7', '#5cb85c', '#f0ad4e', '#ff0000'],
+    lineColors: ['#337ab7', '#f0ad4e', '#5cb85c', '#ff0000'],
     pointSize: 2,
     hideHover: 'auto',
     resize: true
 });
 
-let deplacement = [{
+let total = [{
     period: '2016-01',
-    montant: 500
+    montant: 4466
 }, {
     period: '2016-02',
-    montant: 300
+    montant: 4372
 
 }, {
     period: '2016-03',
-    montant: 125
+    montant: 6952
 
 }, {
     period: '2016-04',
-    montant: 987
+    montant: 5867
 
 }, {
     period: '2016-05',
-    montant: 365
+    montant: 9185
 
 }, {
     period: '2016-06',
-    montant: 300
+    montant: 8180
 
 }, {
     period: '2016-07',
-    montant: 102
+    montant: 6497
 
 }, {
     period: '2016-08',
-    montant: 450
+    montant: 2203
 
 }, {
     period: '2016-09',
-    montant: 180
+    montant: 4487
 
 }, {
     period: '2016-10',
-    montant: 1000
+    montant: 9830
 
 }];
 
-let fournituresData = [
+let vehicule = [{
+    period: '2016-01',
+    montant: 100
+}, {
+    period: '2016-02',
+    montant: 452
+
+}, {
+    period: '2016-03',
+    montant: 365
+
+}, {
+    period: '2016-04',
+    montant: 767
+
+}, {
+    period: '2016-05',
+    montant: 110
+
+}, {
+    period: '2016-06',
+    montant: 10
+
+}, {
+    period: '2016-07',
+    montant: 25
+
+}, {
+    period: '2016-08',
+    montant: 180
+
+}, {
+    period: '2016-09',
+    montant: 584
+
+}, {
+    period: '2016-10',
+    montant: 102
+
+}];
+
+let deplacement = [
     {
         period: '2016-01',
-        montant: 400
+        montant: 500
+
     }, {
         period: '2016-02',
-        montant: 360
+        montant: 300
 
     }, {
         period: '2016-03',
-        montant: 400
+        montant: 125
 
     }, {
         period: '2016-04',
-        montant: 148
+        montant: 987
 
     }, {
         period: '2016-05',
-        montant: 900
+        montant: 365
 
     }, {
         period: '2016-06',
-        montant: 800
+        montant: 300
 
     }, {
         period: '2016-07',
-        montant: 600
+        montant: 102
 
     }, {
         period: '2016-08',
-        montant: 200
+        montant: 450
 
     }, {
         period: '2016-09',
-        montant: 10687
+        montant: 180
 
     }, {
         period: '2016-10',
-        montant: 8432
+        montant: 1000
 
     }];
 
-let diversData = [{
+let fournitures = [{
+    period: '2016-01',
+    montant: 400
+
+}, {
+    period: '2016-02',
+    montant: 360
+
+}, {
+    period: '2016-03',
+    montant: 400
+
+}, {
+    period: '2016-04',
+    montant: 148
+
+}, {
+    period: '2016-05',
+    montant: 900
+
+}, {
+    period: '2016-06',
+    montant: 800
+
+}, {
+    period: '2016-07',
+    montant: 600
+
+}, {
+    period: '2016-08',
+    montant: 200
+
+}, {
+    period: '2016-09',
+    montant: 1068
+
+}, {
+    period: '2016-10',
+    montant: 1432
+
+}];
+
+let restauration = [{
     period: '2016-01',
     montant: 2666
+
 }, {
     period: '2016-02',
     montant: 2778
@@ -189,16 +274,99 @@ let diversData = [{
 
 }, {
     period: '2016-08',
-    montant: 15073
+    montant: 1073
 
 }, {
     period: '2016-09',
-    montant: 10687
+    montant: 1087
 
 }, {
     period: '2016-10',
-    montant: 8432
+    montant: 3432
 
+}];
+
+let hebergement = [{
+    period: '2016-01',
+    montant: 400
+
+}, {
+    period: '2016-02',
+    montant: 360
+
+}, {
+    period: '2016-03',
+    montant: 400
+
+}, {
+    period: '2016-04',
+    montant: 148
+
+}, {
+    period: '2016-05',
+    montant: 900
+
+}, {
+    period: '2016-06',
+    montant: 800
+
+}, {
+    period: '2016-07',
+    montant: 600
+
+}, {
+    period: '2016-08',
+    montant: 200
+
+}, {
+    period: '2016-09',
+    montant: 1068
+
+}, {
+    period: '2016-10',
+    montant: 3432
+
+}];
+
+let divers = [{
+    period: '2016-01',
+    montant: 400
+
+}, {
+    period: '2016-02',
+    montant: 122
+
+}, {
+    period: '2016-03',
+    montant: 750
+
+}, {
+    period: '2016-04',
+    montant: 50
+
+}, {
+    period: '2016-05',
+    montant: 100
+
+}, {
+    period: '2016-06',
+    montant: 600
+
+}, {
+    period: '2016-07',
+    montant: 350
+
+}, {
+    period: '2016-08',
+    montant: 100
+
+}, {
+    period: '2016-09',
+    montant: 500
+
+}, {
+    period: '2016-10',
+    montant: 432
 }];
 
 let secteurChange = (data, label) => {
@@ -208,19 +376,32 @@ let secteurChange = (data, label) => {
         xkey: 'period',
         ykeys: ['montant'],
         labels: [label],
-        lineColors: ['#337ab7'],
+        lineColors: ['#5cb85c'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true,
         data: data
     };
     Morris.Area(area);
+    sectorTableUpdate(data);
 };
+
+let sectorTableUpdate = (data) => {
+    $("#sectorTable > tbody").empty();
+    data.forEach((element) => {
+        $("#sectorTable > tbody").append(`<tr><td>${element.period}</td><td>${element.montant} €</td></tr>`);
+    });
+};
+
 result.secteurChange = secteurChange;
-result.diversData = diversData;
-result.fournituresData = fournituresData;
-result.deplacement = deplacement;
+result.diversData = divers;
+result.fournituresData = fournitures;
+result.deplacementData = deplacement;
+result.vehiculeData = vehicule;
+result.restaurationData = restauration;
+result.hebergementData = hebergement;
+result.totalData = total;
 
 morris.datas = result;
 
-secteurChange(deplacement);
+secteurChange(total, "Tous les secteurs");

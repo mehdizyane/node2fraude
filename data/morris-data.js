@@ -4,58 +4,59 @@ $(function() {
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
-            iphone: 2666,
-            ipad: null,
-            itouch: 2647
+            encours: 2666,
+            valide: null,
+            refuse: 2647
         }, {
             period: '2010 Q2',
-            iphone: 2778,
-            ipad: 2294,
-            itouch: 2441
+            encours: 2778,
+            valide: 2294,
+            refuse: 2441
         }, {
             period: '2010 Q3',
-            iphone: 4912,
-            ipad: 1969,
-            itouch: 2501
+            encours: 4912,
+            valide: 1969,
+            refuse: 2501
         }, {
             period: '2010 Q4',
-            iphone: 3767,
-            ipad: 3597,
-            itouch: 5689
+            encours: 3767,
+            valide: 3597,
+            refuse: 5689
         }, {
             period: '2011 Q1',
-            iphone: 6810,
-            ipad: 1914,
-            itouch: 2293
+            encours: 6810,
+            valide: 1914,
+            refuse: 2293
         }, {
             period: '2011 Q2',
-            iphone: 5670,
-            ipad: 4293,
-            itouch: 1881
+            encours: 5670,
+            valide: 4293,
+            refuse: 1881
         }, {
             period: '2011 Q3',
-            iphone: 4820,
-            ipad: 3795,
-            itouch: 1588
+            encours: 4820,
+            valide: 3795,
+            refuse: 1588
         }, {
             period: '2011 Q4',
-            iphone: 15073,
-            ipad: 5967,
-            itouch: 5175
+            encours: 15073,
+            valide: 5967,
+            refuse: 5175
         }, {
             period: '2012 Q1',
-            iphone: 10687,
-            ipad: 4460,
-            itouch: 2028
+            encours: 10687,
+            valide: 4460,
+            refuse: 2028
         }, {
             period: '2012 Q2',
-            iphone: 8432,
-            ipad: 5713,
-            itouch: 1791
+            encours: 8432,
+            valide: 5713,
+            refuse: 1791
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['encours', 'valide', 'refuse'],
+        labels: ['En cours', 'Validées', 'Refusées'],
+        lineColors : ['#0066ff', '#00b300', '#ff0000'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true

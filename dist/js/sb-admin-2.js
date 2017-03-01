@@ -13,6 +13,7 @@ $(function () {
 //collapses the sidebar on window resize.
 // Sets the min-height of #page-wrapper to window size
 $(function () {
+
     $(window).bind("load resize", function () {
         var topOffset = 50;
         var width = this.window.innerWidth > 0 ? this.window.innerWidth : this.screen.width;
@@ -102,5 +103,16 @@ $(function () {
                 buttonChange("Tous les secteurs");
                 break;
         }
+    });
+
+    var updateListStyle = function updateListStyle(style, texts) {
+        texts.forEach(function (text) {
+            $(".panel-body").append('<div class="alert ' + style + '">' + text + '</div>');
+        });
+    };
+
+    $("#toValidateList").click(function () {
+        $("#page-wrapper").load("../pages/ndf-list.html");
+        updateListStyle('alert-success', ['NDF - C.PIGNON', 'NDF - C.PIGNON']);
     });
 });

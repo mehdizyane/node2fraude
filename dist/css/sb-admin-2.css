@@ -22,6 +22,24 @@ body {
     border-left: 1px solid #e7e7e7;
   }
 }
+.navbar.navbar-static-top {
+  background-color: #006c32;
+  color: #fff;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+  padding-left: 60px;
+  background-image: url(../icon.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 50px 50px;
+}
+.navbar-static-top .navbar-top-links>li>a, .navbar-static-top .navbar-top-links>li>a:active {
+  color: #fff;
+}
+.navbar-static-top .navbar-top-links>li>a:focus, .navbar-static-top .navbar-top-links>li>a:hover {
+  color: #006c32;
+}
 .navbar-top-links {
   margin-right: 0;
 }

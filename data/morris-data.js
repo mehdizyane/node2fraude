@@ -76,6 +76,59 @@ $(function() {
         element: 'morris-area-chart-2',
         data: [{
             period: '2016-01',
+            montant: 4466
+        }, {
+            period: '2016-02',
+            montant: 4372
+
+        }, {
+            period: '2016-03',
+            montant: 6952
+
+        }, {
+            period: '2016-04',
+            montant: 5867
+
+        }, {
+            period: '2016-05',
+            montant: 9185
+
+        }, {
+            period: '2016-06',
+            montant: 8180
+
+        }, {
+            period: '2016-07',
+            montant: 6497
+
+        }, {
+            period: '2016-08',
+            montant: 2203
+
+        }, {
+            period: '2016-09',
+            montant: 4487
+
+        }, {
+            period: '2016-10',
+            montant: 9830
+
+        }],
+        xkey: 'period',
+        ykeys: ['montant'],
+        labels: ['Tous les frais remboursés'],
+        lineColors : ['#337ab7'],
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true,
+        behaveLikeLine: true
+    });
+
+
+    Morris.Area({
+        element: 'morris-area-chart-3',
+        data: [{
+            period: '2016-01',
             montant: 100
         }, {
             period: '2016-02',
@@ -116,7 +169,7 @@ $(function() {
         }],
         xkey: 'period',
         ykeys: ['montant'],
-        labels: ['Frais de véhicule'],
+        labels: ['Véhicule'],
         lineColors : ['#337ab7'],
         pointSize: 2,
         hideHover: 'auto',
@@ -125,7 +178,7 @@ $(function() {
     });
 
     Morris.Area({
-        element: 'morris-area-chart-3',
+        element: 'morris-area-chart-4',
         data: [{
             period: '2016-01',
             montant: 500
@@ -168,7 +221,7 @@ $(function() {
         }],
         xkey: 'period',
         ykeys: ['montant'],
-        labels: ['Frais de déplacement'],
+        labels: ['Déplacement'],
         lineColors : ['#337ab7'],
         pointSize: 2,
         hideHover: 'auto',
@@ -177,7 +230,7 @@ $(function() {
     });
 
     Morris.Area({
-        element: 'morris-area-chart-4',
+        element: 'morris-area-chart-5',
         data: [{
             period: '2016-01',
             montant: 400
@@ -211,16 +264,16 @@ $(function() {
 
         }, {
             period: '2016-09',
-            montant: 10687
+            montant: 1068
 
         }, {
             period: '2016-10',
-            montant: 8432
+            montant: 1432
 
         }],
         xkey: 'period',
         ykeys: ['montant'],
-        labels: ['Frais de fournistures & petits équipements'],
+        labels: ['Fournitures & équipements'],
         lineColors : ['#337ab7'],
         pointSize: 2,
         hideHover: 'auto',
@@ -229,7 +282,7 @@ $(function() {
     });
 
     Morris.Area({
-        element: 'morris-area-chart-5',
+        element: 'morris-area-chart-6',
         data: [{
             period: '2016-01',
             montant: 2666
@@ -259,15 +312,15 @@ $(function() {
 
         }, {
             period: '2016-08',
-            montant: 15073
+            montant: 1073
 
         }, {
             period: '2016-09',
-            montant: 10687
+            montant: 1087
 
         }, {
             period: '2016-10',
-            montant: 8432
+            montant: 3432
 
         }],
         xkey: 'period',
@@ -279,6 +332,111 @@ $(function() {
         resize: true,
         behaveLikeLine: true
     });
+
+    Morris.Area({
+        element: 'morris-area-chart-7',
+        data: [{
+            period: '2016-01',
+            montant: 400
+        }, {
+            period: '2016-02',
+            montant: 360
+
+        }, {
+            period: '2016-03',
+            montant: 400
+
+        }, {
+            period: '2016-04',
+            montant: 148
+
+        }, {
+            period: '2016-05',
+            montant: 900
+
+        }, {
+            period: '2016-06',
+            montant: 800
+
+        }, {
+            period: '2016-07',
+            montant: 600
+
+        }, {
+            period: '2016-08',
+            montant: 200
+
+        }, {
+            period: '2016-09',
+            montant: 1068
+
+        }, {
+            period: '2016-10',
+            montant: 3432
+
+        }],
+        xkey: 'period',
+        ykeys: ['montant'],
+        labels: ['Hébergement'],
+        lineColors : ['#337ab7'],
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true,
+        behaveLikeLine: true
+    });
+
+    Morris.Area({
+        element: 'morris-area-chart-8',
+        data: [{
+            period: '2016-01',
+            montant: 400
+        }, {
+            period: '2016-02',
+            montant: 122
+
+        }, {
+            period: '2016-03',
+            montant: 750
+
+        }, {
+            period: '2016-04',
+            montant: 50
+
+        }, {
+            period: '2016-05',
+            montant: 100
+
+        }, {
+            period: '2016-06',
+            montant: 600
+
+        }, {
+            period: '2016-07',
+            montant: 350
+
+        }, {
+            period: '2016-08',
+            montant: 100
+
+        }, {
+            period: '2016-09',
+            montant: 500
+
+        }, {
+            period: '2016-10',
+            montant: 432
+
+        }],
+        xkey: 'period',
+        ykeys: ['montant'],
+        labels: ['Divers'],
+        lineColors : ['#337ab7'],
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true,
+        behaveLikeLine: true
+    });
+
 
     Morris.Donut({
         element: 'morris-donut-chart',

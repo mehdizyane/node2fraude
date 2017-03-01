@@ -105,14 +105,32 @@ $(function () {
         }
     });
 
+    var ndfHtml = function ndfHtml(header) {
+        return '<div class="row">\n        <div class="col-lg-12">\n            <h1 class="page-header">Liste note de frais</h1>\n        </div>\n    </div>\n    <div class="row">\n        <button id="back-home" type="button" class="btn btn-success btn-circle btn-lg">\n            <i class="fa fa-arrow-left"></i>\n        </button>\n    </div>\n    <div class="row">\n        <div class="col-lg-6">\n            <div class="panel panel-default">\n                <div class="panel-heading">\n                    ' + header + '\n                </div>\n                <div class="panel-body"></div>\n            </div>\n        </div>\n    </div>';
+    };
+
     var updateListStyle = function updateListStyle(style, texts) {
-        texts.forEach(function (text) {
-            $(".panel-body").append('<div class="alert ' + style + '">' + text + '</div>');
+        texts.forEach(function (text, index) {
+            $('#ndf-content > .row > div > .panel > .panel-body').append('\n            <div class="row" id="' + text + '+' + index + '">\n            <div class="alert ' + style + '">\n                ' + text + '\n                <div class="col-lg-10"></div>\n                <div class="col-lg-1">\n                    <button type="button" class="btn btn-info btn-circle"><i class="fa fa-check"></i>\n                        </button>\n                </div>\n                <div class="col-lg-1">\n                    <button type="button" class="btn btn-warning btn-circle"><i class="fa fa-times"></i>\n                        </button>\n                </div>\n            </div>\n            </div>');
         });
     };
 
+    var toNdfList = function toNdfList(style, header, data) {
+        $("#content").hide();
+        $("#ndf-content").empty().append(ndfHtml(header));
+        updateListStyle(style, data);
+    };
+
+    $("#back-home").click(function () {
+        $("#content").show();
+        $("#ndf-content").hide();
+    });
+
     $("#toValidateList").click(function () {
-        $("#page-wrapper").load("../pages/ndf-list.html");
-        updateListStyle('alert-success', ['NDF - C.PIGNON', 'NDF - C.PIGNON']);
+        toNdfList('alert-info', 'Notes de frais à valider', ['NDF - C.PIGNON', 'NDF - C.PIGNON']);
+    });
+
+    $("#toProcessingList").click(function () {
+        toNdfList('alert-warning', 'Notes de frais en cours', ['NDF - P.SAINSTEBAN', 'NDF - P.SAINSTEBAN']);
     });
 });

@@ -41,7 +41,7 @@ $(function() {
     }
 
     // Login action
-    $("#login-button").click((event) => {
+    $("#login-button").click(() => {
         let login = $("[name='login']").val();
         let password = $("[name='password']").val();
         
@@ -55,6 +55,34 @@ $(function() {
             loginKo();
         }else{
             loginKo();
+        }
+    });
+
+    $("#secteursSelector > li > a").click((event) => {
+        let buttonChange = (value) => $("#sectorSelector").text(value);
+        switch (event.target.id){
+            case "vehicule":
+                morris.datas.secteurChange(morris.datas.deplacement, "Véhicule");
+                buttonChange("Véhicule");
+                break;
+            case "deplacement":
+                morris.datas.secteurChange(morris.datas.deplacement, "Déplacement");
+                buttonChange("Déplacement");
+                break;
+            case "fourniture":
+                morris.datas.secteurChange(morris.datas.fournituresData, "Fourniture");
+                buttonChange("Fourniture");
+                break;
+            case "restaurant":
+                morris.datas.secteurChange(morris.datas.fournituresData, "Restaurant");
+                buttonChange("Véhicule");
+                break;
+            case "hebergement":
+                buttonChange("Véhicule");
+                break;
+            case "divers":
+                buttonChange("Véhicule");
+                break;
         }
     });
 });
